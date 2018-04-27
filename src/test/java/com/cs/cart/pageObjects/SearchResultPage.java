@@ -12,6 +12,9 @@ public class SearchResultPage {
 		this.driver = driver;
 	}
 
+	public String nomeDaTab() {
+		return driver.getTitle();
+	}
 	public ProductPage selecionaProduto(String linkText) {
 		WebElement produto = driver.findElement(By.linkText(linkText));
 		produto.click();

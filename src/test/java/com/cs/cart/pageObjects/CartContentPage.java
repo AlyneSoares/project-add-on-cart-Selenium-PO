@@ -31,27 +31,5 @@ public class CartContentPage {
 		String valorTotal = driver.findElement(By.id("sec_cart_total")).getText();
 		return valorTotal;
 	}
-	
-//	public String[] produtosNoCarrinho() {
-//	String[] produtos = new String[2];
-//	for(String produto: produtos) {			
-//		List<WebElement> celulas = driver.findElements(By.tagName("tr"));
-//		for(WebElement c: celulas) {
-//			String quantidade = driver.findElement(By.id("amount_80164162")).getAttribute("value");
-//			String nomeProduto = driver.findElement(By.className("ty-cart-content__product-title")).getText(); 
-//					
-//		}
-//	}
-//	
-//	public List<WebElement> produtosDoCarrinho() {
-//		Object[] celulas = new ArrayList<WebElement>();
-//		
-//		celulas = driver.findElements(By.tagName("tr")).toArray();
-//		.findElement(By.id("amount_80164162")).getAttribute("value");
-//		String nomeProduto = driver.findElement(By.className("ty-cart-content__product-title")).getText(); 
-//		produto[] = quantidade, nomeProduto;
-//		}
-//		
-//	}
-	
+		
 }

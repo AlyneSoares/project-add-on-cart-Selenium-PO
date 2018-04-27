@@ -9,17 +9,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ProductPage {
 
 	private WebDriver driver;
-	
-	WebDriverWait wait = new WebDriverWait(driver, 7);
-	
+
 	public ProductPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public void espera() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.id("search_input")));
+		WebDriverWait wait = new WebDriverWait(driver, 7);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("ajax-overlay")));
 	}
-	
+
 	public void adicionaMaisUmProduto() {
 		WebElement plusOneButton = driver.findElement(By.xpath("//*[@id=\"qty_238\"]/div/a[1]"));
 		plusOneButton.click();		
@@ -46,15 +45,15 @@ public class ProductPage {
 	}
 
 	public void acionaPesquisa() {
-		WebElement botaoAcionaPesquisa = driver.findElement(By.cssSelector(".ty-search-magnifier"));
+		WebElement botaoAcionaPesquisa = driver.findElement(By.className("ty-icon-search"));
 		botaoAcionaPesquisa.click();
 	}
-	
+
 	public void selecionaProduto(String linkText) {
 		WebElement produto = driver.findElement(By.linkText(linkText));
 		produto.click();
 	}
-	
+
 	public String nomeDoProduto() {
 		return driver.getTitle();
 	}
@@ -62,10 +61,12 @@ public class ProductPage {
 	public String meuCarrinho() {
 		return driver.findElement(By.id("sw_dropdown_8")).getText();
 	}
-	
+
 	public CartContentPage abreCarrinho() {
-		WebElement dropdownCart = driver.findElement(By.linkText("View cart"));
+		WebElement dropdownCart = driver.findElement(By.id("sw_dropdown_8"));
 		dropdownCart.click();
+		WebElement viewCart = driver.findElement(By.linkText("View cart"));
+		viewCart.click();
 		return new CartContentPage(driver);
 	}
 }
