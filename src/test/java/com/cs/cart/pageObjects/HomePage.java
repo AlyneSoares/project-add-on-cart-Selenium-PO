@@ -18,6 +18,7 @@ public class HomePage {
 	public void abrePagina() {
 		driver.get("http://demo.cs-cart.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 	
 	public void fechaBrowser() {

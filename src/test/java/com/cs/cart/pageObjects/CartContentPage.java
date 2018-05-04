@@ -2,6 +2,7 @@ package com.cs.cart.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CartContentPage {
 
@@ -11,20 +12,20 @@ public class CartContentPage {
 		this.driver = driver;
 	}
 
-	public String primeiroProduto() {
+	public String qtidadePrimeiroProduto() {
 		String quantidade = driver.findElement(By.id("amount_80164162")).getAttribute("value");
-		String nome = driver.findElement(By.xpath("//*[@id=\"cart_items\"]/"
-				+ "table/tbody/tr[1]/td[2]/div[2]/a[1]")).getAttribute("a");
-		String nomeQuantidadeProdutos = nome + " " + quantidade;
-		return nomeQuantidadeProdutos;
+		return quantidade;
 	}
 	
-	public String segundoProduto() {
-		String quantidade = driver.findElement(By.id("amount_2012371633")).getAttribute("value");
-		String nome = driver.findElement(By.xpath("//*[@id=\"cart_items\"]/"
-				+ "table/tbody/tr[2]/td[2]/div[2]/a[1]")).getAttribute("a");
-		String nomeQuantidadeProdutos = nome + " " + quantidade;
-		return nomeQuantidadeProdutos;
+	public String nomePrimeiroProduto() {
+		WebElement nomeProduto = driver.findElement(By.tagName("<a href=\"http://demo.cs-cart.com/stores/c99d5e432073cb8e/electronics/cell-phones/apple-iphone/apple-iphone-4s-black/\" class=\"ty-cart-content__product-title\">"));
+		String nome = nomeProduto.getText();
+		return nome;
+	}
+	
+	public String qtidadeSegundoProduto() {
+		String quantidade2 = driver.findElement(By.id("amount_2012371633")).getAttribute("value");
+		return quantidade2;
 	}
 	
 	public String valorTotal() {
