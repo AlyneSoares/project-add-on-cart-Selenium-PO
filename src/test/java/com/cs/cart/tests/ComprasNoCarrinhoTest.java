@@ -85,9 +85,8 @@ public class ComprasNoCarrinhoTest {
 		assertEquals("1", cartPage.qtidadeSegundoProduto());
 		assertEquals("1,019.97", cartPage.valorTotal());
 		
-		assertEquals("Apple iPhone 4S Black", cartPage.nomePrimeiroProduto());
-		
-//		assertEquals("Lego Batman (Wii) 1", cartPage.segundoProduto());
+//		assertEquals("Apple iPhone 4S Black", "Lego Batman (Wii)", cartPage.nomeDosProdutos());
+//		assertEquals(" 1", cartPage.segundoProduto());
 	}
 
 

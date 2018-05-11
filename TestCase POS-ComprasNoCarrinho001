@@ -1,0 +1,43 @@
+Estudo de caso: demo.cs-cart.com
+Autora: Alyne MR Soares
+
+Test Suit ID: AdicionarProdutosNoCarrinho001
+Teste Case ID: POS-AddProdutosNoCarrinho001
+Summary: Pesquisar um jogo e adicionar ao carrinho; pesquisar um smartphone, aumentar a quantidade e adicionar ao carrinho; conferir quantidades e total da compra
+Requisito: CRUD Carrinho de compras
+Pre-requisitos: inexistentes
+
+Steps:
+1. Entrar no site
+2. Digitar 'batman' no campo de pesquisa
+3. Selecionar jogo para Wii
+4. Adicionar ao carrinho e esperar overlay sumir
+5. Digitar 'iphone' no campo de pesquisa
+6. Seleciona 'iPhone black' 
+7. Clicar no '+' 
+8. Adicionar ao carrinho
+9. Clicar no carrinho de compras
+10. Clicar em 'view cart'
+11. Conferir valor total e quantidade de produtos 
+
+Resultados Esperados:
+1. Abrir página inicial
+2. Abrir resultados de pesquisa
+3. Abrir pagina com detalhes do jogo
+4. Abre overlay durante alguns segundos e some 
+5. Abre página de resultados de pesquisa
+6. Abre página do produto
+7. Aumenta quantidade para 2 produtos
+8. Abre overlay durante alguns segundos e some 
+9. Surge menu dropdown com conteúdo do carrinho
+10. Abre a página do carrinho de compras
+
+
+Resultados Atuais:
+Iguais aos esperados
+
+Status:
+Passed
+
+Automation?
+Sim. Usar: ComprasNoCarrinhoTest.java

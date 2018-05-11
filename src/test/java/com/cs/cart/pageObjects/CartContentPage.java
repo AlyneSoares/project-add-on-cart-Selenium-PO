@@ -1,5 +1,8 @@
 package com.cs.cart.pageObjects;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,9 +21,18 @@ public class CartContentPage {
 	}
 	
 	public String nomePrimeiroProduto() {
-		WebElement nomeProduto = driver.findElement(By.tagName("<a href=\"http://demo.cs-cart.com/stores/c99d5e432073cb8e/electronics/cell-phones/apple-iphone/apple-iphone-4s-black/\" class=\"ty-cart-content__product-title\">"));
-		String nome = nomeProduto.getText();
+		List<WebElement> nomeProduto = driver.findElements(By.className(".ty-cart-content__product-title"));
+		String nome = nomeProduto.get(0).getText();
 		return nome;
+	}
+
+	public List<String> nomeDosProdutos() {
+		List<WebElement> produtos = driver.findElements(By.className(".ty-cart-content__product-title"));
+		List<String> nomes = new ArrayList<String>();
+		for (WebElement produto: produtos) {
+			nomes.add(produto.getText());
+		}
+		return nomes;
 	}
 	
 	public String qtidadeSegundoProduto() {

@@ -1,0 +1,39 @@
+Estudo de caso: demo.cs-cart.com
+Autora: Alyne MR Soares
+
+Test Suit ID: CadastroUser001
+Teste Case ID: NEG-PedirConfirmacarDeNaoSerUmRobot
+Summary: Pedir confirmação de não ser uma robô ao realizar um novo cadastro de usuário
+Requisito: Cadastro001
+Pre-requisitos: inexistentes
+
+Steps:
+1. Entrar no site
+2. Clicar no menu dropdown 'My account' 
+3. Clicar em 'Register'
+4. Digitar no campo de email: teste@teste.com
+5. Digitar no campo senha: teste
+6. Digitar no campo confirmação de senha: teste
+7. Digitar no campo data de aniversário: 01/01/1990
+8. Clicar em 'Register'
+
+Resultados Esperados:
+1. Abrir página inicial
+2. Aparecer o muno dropdown
+3. Abrir página de registro
+4. Email se manter visivel
+5. Senha coberta com máscara
+6. Confirmação de senha com máscara
+7. Ao clicar abre um calendário overlay 
+	Após digitar o calendário irá para a data 01/01/1990
+8. Acima e abaixo do box "i'm not a robot" surgem as mensagens: "Anti-bot validation*" e "Please confirm you are not a robot."
+
+Resultados Atuais:
+Os resultados foram iguais aos esperados
+
+Status:
+Passed
+
+Automation?
+Sim. Usar: CriaCadastroDeClienteTeste.java
+
