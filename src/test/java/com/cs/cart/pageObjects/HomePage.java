@@ -18,6 +18,7 @@ public class HomePage {
 		System.setProperty("webdriver.chrome.driver", "/home/alyne/workspace/chromedriver");
 		driver = new ChromeDriver();
 	}
+	
 	public void abrePagina() {
 		driver.get("http://demo.cs-cart.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

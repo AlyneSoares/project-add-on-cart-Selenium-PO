@@ -24,46 +24,46 @@ public class ComprasNoCarrinhoTest {
 	public void tearDown() throws Exception {
 		homepage.fechaBrowser();
 	}
-	//
-	//	@Test
-	//	public void pesquisaBatman() {
-	//		homepage.abrePagina();
-	//		assertEquals("Shopping Cart Software & Ecommerce Software Solutions by CS-Cart", homepage.getTitle());
-	//		homepage.escreveNoCampoPesquisa("batman");
-	//		SearchResultPage searchResultPage =  homepage.acionaPesquisa();
-	//		assertEquals("Search results",searchResultPage.nomeDaTab());
-	//	}
-	//
-	//
-	//	@Test
-	//	public void adicionaBatman() throws InterruptedException {
-	//		homepage.abrePagina();
-	//		homepage.escreveNoCampoPesquisa("batman");
-	//		SearchResultPage searchResultPage = homepage.acionaPesquisa();
-	//		ProductPage productPage = searchResultPage.selecionaProduto("Lego Batman (Wii)");
-	//		assertEquals("Video Games :: Nintendo Wii :: Lego Batman (Wii)", productPage.nomeDoProduto());
-	//		productPage.adicionaAoCarrinho("button_cart_84");	
-	//		productPage.espera();
-	//		assertEquals("MY CART\n1 item(s) for $19.99", productPage.meuCarrinho());
-	//	}
-	//
-	//	@Test
-	//	public void adicionaIPhone() throws InterruptedException {
-	//		homepage.abrePagina();
-	//		homepage.escreveNoCampoPesquisa("batman");
-	//		SearchResultPage searchResultPage = homepage.acionaPesquisa();
-	//		ProductPage productPage = searchResultPage.selecionaProduto("Lego Batman (Wii)");
-	//		productPage.adicionaAoCarrinho("button_cart_84");	
-	//		productPage.espera();
-	//		productPage.escreveNoCampoPesquisa("iPhone");
-	//		productPage.espera();
-	//		productPage.acionaPesquisa();
-	//		productPage.selecionaProduto("Apple iPhone 4S Black");
-	//		productPage.adicionaMaisUmProduto();
-	//		productPage.adicionaAoCarrinho("button_cart_238");
-	//		productPage.espera();
-	//		assertEquals("MY CART\n3 item(s) for $1,019.97", productPage.meuCarrinho());
-	//	}
+
+	@Test
+	public void pesquisaBatman() {
+		homepage.abrePagina();
+		assertEquals("Shopping Cart Software & Ecommerce Software Solutions by CS-Cart", homepage.getTitle());
+		homepage.escreveNoCampoPesquisa("batman");
+		SearchResultPage searchResultPage =  homepage.acionaPesquisa();
+		assertEquals("Search results",searchResultPage.nomeDaTab());
+	}
+
+
+	@Test
+	public void adicionaBatman() throws InterruptedException {
+		homepage.abrePagina();
+		homepage.escreveNoCampoPesquisa("batman");
+		SearchResultPage searchResultPage = homepage.acionaPesquisa();
+		ProductPage productPage = searchResultPage.selecionaProduto("Lego Batman (Wii)");
+		assertEquals("Video Games :: Nintendo Wii :: Lego Batman (Wii)", productPage.nomeDoProduto());
+		productPage.adicionaAoCarrinho("button_cart_84");	
+		productPage.espera();
+		assertEquals("MY CART\n1 item(s) for $19.99", productPage.meuCarrinho());
+	}
+
+	@Test
+	public void adicionaIPhone() throws InterruptedException {
+		homepage.abrePagina();
+		homepage.escreveNoCampoPesquisa("batman");
+		SearchResultPage searchResultPage = homepage.acionaPesquisa();
+		ProductPage productPage = searchResultPage.selecionaProduto("Lego Batman (Wii)");
+		productPage.adicionaAoCarrinho("button_cart_84");	
+		productPage.espera();
+		productPage.escreveNoCampoPesquisa("iPhone");
+		productPage.espera();
+		productPage.acionaPesquisa();
+		productPage.selecionaProduto("Apple iPhone 4S Black");
+		productPage.adicionaMaisUmProduto();
+		productPage.adicionaAoCarrinho("button_cart_238");
+		productPage.espera();
+		assertEquals("MY CART\n3 item(s) for $1,019.97", productPage.meuCarrinho());
+	}
 
 	@Test
 	public void confereCarrinhoTest() {
@@ -84,9 +84,7 @@ public class ComprasNoCarrinhoTest {
 		assertEquals("2", cartPage.qtidadePrimeiroProduto());
 		assertEquals("1", cartPage.qtidadeSegundoProduto());
 		assertEquals("1,019.97", cartPage.valorTotal());
-		
-//		assertEquals("Apple iPhone 4S Black", "Lego Batman (Wii)", cartPage.nomeDosProdutos());
-//		assertEquals(" 1", cartPage.segundoProduto());
+
 	}
 
 

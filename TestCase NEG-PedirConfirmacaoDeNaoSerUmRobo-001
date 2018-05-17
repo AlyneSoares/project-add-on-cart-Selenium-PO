@@ -2,7 +2,7 @@ Estudo de caso: demo.cs-cart.com
 Autora: Alyne MR Soares
 
 Test Suit ID: CadastroUser001
-Teste Case ID: NEG-PedirConfirmacarDeNaoSerUmRobot
+Test Case ID: NEG-PedirConfirmacarDeNaoSerUmRobot
 Summary: Pedir confirmação de não ser uma robô ao realizar um novo cadastro de usuário
 Requisito: Cadastro001
 Pre-requisitos: inexistentes
